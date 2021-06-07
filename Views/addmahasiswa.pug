@@ -1,0 +1,18 @@
+extends layout2
+
+block content
+    h1=title 
+    .container 
+            .mb-3
+            label.form-label(for='name') Nama
+            input#name.form-control(type='text' value='' name='Nama')
+            .mb-3
+            label.form-label(for='address') Alamat
+            input#address.form-control(type='text' name='Alamat' value='')
+            .mb-3
+            label.form-label(for='NIM') NIM
+            input#address.form-control(type='text' name='NIM' value='')
+            .mb-3
+            label.form-label(for='class') Kelas
+            input#address.form-control(type='text' name='Kelas' value='')
+            button.btn.btn-primary(type='submit' value="Submit") Submit

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aplikasi Vue #1</title>
+    <style>
+        button{
+           background-color: black;
+           color: wheat; 
+        }
+        #lampu1, #lampu2, #lampu3, #lampuAll{
+            margin: 10%;
+        }
+    </style>
+    <!-- Menyisipkan Vuejs dari CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="lampu1">
+        <h3>Lampu A {{message}}</h3>
+        <button v-on:click="nyala">Swicth A</button>
+    </div>
+    <div id="lampu2">
+        <h3>Lampu B {{message}}</h3>
+        <button v-on:click="nyala">Swicth B</button>
+    </div>
+    <div id="lampu3">
+        <h3>Lampu C {{message}}</h3>
+        <button v-on:click="nyala">Swicth C</button>
+    </div>
+    <div id="lampuAll">
+        <h3>semua lampu</h3>
+        <button v-on:click="semua">Switch All</button>
+    </div>
+    
+
+  </body>
+  <script>
+    var lampu1 = new Vue({
+        el: "#lampu1",
+        data: {
+            message: "Mati"
+        },
+        methods: {
+            nyala: function () {
+              data: {
+                  if(this.message === "Mati") {
+                    this.message = "Nyala"
+                  } else {
+                    this.message = "Mati"
+                  }
+              }
+            }
+          }
+    })
+    var lampu2 = new Vue({
+        el: "#lampu2",
+        data: {
+            message: "Mati"
+        },
+        methods: {
+            nyala: function () {
+              data: {
+                  if(this.message === "Mati") {
+                    this.message = "Nyala"
+                  } else {
+                    this.message = "Mati"
+                  }
+              }
+            }
+          }
+    })
+    var lampu3 = new Vue({
+        el: "#lampu3",
+        data: {
+            message: "Mati"
+        },
+        methods: {
+            nyala: function () {
+              data: {
+                  if(this.message === "Mati") {
+                    this.message = "Nyala"
+                  } else {
+                    this.message = "Mati"
+                  }
+              }
+            }
+          }
+        
+    })
+    var lampuSemua = new Vue( {
+        el: "#lampuAll",
+        methods: {
+            semua: function() {
+                if(lampu1.message === "Mati") {
+                    lampu1.message = "Nyala"
+                } else {
+                    lampu1.message = "Mati"
+                }
+                if(lampu2.message === "Mati") {
+                    lampu2.message = "Nyala"
+                } else {
+                    lampu2.message = "Mati"
+                }
+                if(lampu3.message === "Mati") {
+                    lampu3.message = "Nyala"
+                } else {
+                    lampu3.message = "Mati"
+                }
+            }
+        }
+    })
+  </script>
+  
+</html>
